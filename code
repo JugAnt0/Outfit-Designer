@@ -1,0 +1,45 @@
+import random
+import time
+
+print("Welcome to The Outfit Designer!")
+
+while True:
+    print("\nChoose a character style:")
+    time.sleep(1)
+    print("1. Masculine")
+    print("2. Feminine")
+    print("3. Androgynous / Mixed Style")
+    
+    o = input("Select an option (1-3): ")
+    
+    if o not in ["1", "2", "3"]:
+        print("Invalid option. Try again.")
+        continue
+
+    print("\nNice choice!")
+    top = input("Favorite top: ")
+    bottom = input("Favorite bottom: ")
+    shoes = input("Favorite shoes: ")
+    accessory = input("Accessory: ")
+    headwear = input("Headwear: ")
+    
+    print("\nDesigning your outfit...")
+    time.sleep(2)
+
+    print("\n✨ Your Outfit ✨")
+    print(f"{headwear}, {top}, {bottom}, {shoes}, {accessory}")
+    
+    print("\nRunway review:")
+    reviews = [
+        "Serving elegance.",
+        "Giving main character energy.",
+        "Honestly iconic.",
+        "Fit goes hard.",
+        "Pinterest boards wish they were you."
+    ]
+    print(random.choice(reviews))
+
+    r = input("\nDo you want to design another outfit? (yes/no): ")
+    if r.lower() != "yes":
+        print("\nThanks for playing! See you next runway!")
+        break
